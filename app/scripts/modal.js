@@ -1,6 +1,8 @@
+let client;
+
 const init = async () => {
     try {
-        const client = await window.frsh_init();
+        client = await window.frsh_init();
         //        const data = await client.data.get('loggedInUser');
         let data = {};
         try{

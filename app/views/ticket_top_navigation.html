@@ -20,13 +20,36 @@
 </main>
 </body>
 <script defer>
-    (async function init() {
-        var client;
-        client = await app.initialized();
+//    (async function init() {
+//        var client;
+//        client = await app.initialized();
+//        client.events.on('app.activated', () => {
+//            console.info(`---ticket_top_navigation:  app is activated 🥁`);
+//            console.info(`---starting showModal`);
+//        });
+//    })();
+//window.frsh_init().then(function(client) {
+//    window.client = client;
+//});
+
+const init = async () => {
+    try {
+//        const client = await window.frsh_init();
+        console.log('----initializing');
+//        const data = await client.interface.trigger('showModal', {
+//            title: 'Tabist Freshworks Helper',
+//            template: './views/modal.html'
+//        });
         client.events.on('app.activated', () => {
-            console.info(`---ticket_top_navigation:  app is activated 🥁`);
+            console.info(`---ticket_top_navigation: app is activated 🥁`);
             console.info(`---starting showModal`);
         });
-    })();
+        console.log('----initialized');
+//        console.log('----Parent:InterfaceAPI:showModal', data);
+    } catch (error) {
+        console.error('Error initializing Freshworks client:', error);
+    }
+};
+init();
 </script>
 </html>

@@ -1,13 +1,7 @@
 const init = async () => {
     try {
         const client = await window.frsh_init();
-        //        const data = await client.data.get('loggedInUser');
-        let data = {};
-        try{
-             data = await client.data.get('conversation');
-        }catch(e){
-            console.log('--- data not found', e);
-        }
+        const data = await client.data.get('conversation');
 
         const textElement = document.getElementById('sourcetext');
         textElement.innerHTML = `<pre><code>${JSON.stringify(data, null, 2)}</code></pre>`;

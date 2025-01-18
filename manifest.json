@@ -13,6 +13,14 @@
         }
       }
     },
+    "chat_conversation": {
+      "location": {
+        "conversation_user_info": {
+          "url": "index.html",
+          "icon": "styles/images/tabist_logo_c.svg"
+        }
+      }
+    },
     "common": {
       "requests": {}
     }

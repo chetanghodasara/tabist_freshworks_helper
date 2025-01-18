@@ -1,0 +1,68 @@
+<html>
+<script async type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+<script async nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+<script async src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+<script src="{{{appclient}}}"></script>
+<script src="../scripts/app_freshchat.js"></script>
+<body>
+
+<div class="container">
+<!--&lt;!&ndash;  <h3> Interface APIs </h3>&ndash;&gt;-->
+<!--  <h5> Click below to use the feature </h5>-->
+<!--  <fw-button size="small" onclick="showFreshchatModal()">show modal</fw-button>-->
+<button id="showFreshchatModalButton" class="top-left">Show Freshchat Modal</button>
+<!--  <fw-button size="small" onclick="showFreshchatDialog()">show Dialog</fw-button>-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="showConfirm()">show confirm</fw-button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="notify()">Notify</fw-button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <h5> Ticket Detail page APIs </h5>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="hide('status')">Hide status</fw-button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="show('status')">Show status</fw-button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" color="danger" onclick="disable('status')">Disable status</fw-button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="enable('status')">Enable status</fw-button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="setValue('status', 5)">Set status</fw-button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <h5> Editor window APIs </h5>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="openNote()">Open note</fw-button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <fw-button size="small" onclick="insertContent()">InsertContent</fw-button>&ndash;&gt;-->
+</div>
+<!--<script>-->
+<!--  window.frsh_init().then(function(client) {-->
+<!--    window.client = client;-->
+<!--  });-->
+
+<!--  async function showFreshchatModal() {-->
+<!--    try {-->
+<!--      const data = await client.interface.trigger('showModal', {-->
+<!--        title: 'Tabist Freshworks Helper',-->
+<!--        template: './views/modal_freshchat.html'-->
+<!--      });-->
+<!--      console.log('Parent:InterfaceAPI:showModal', data);-->
+<!--    } catch (error) {-->
+<!--      console.log('Parent:InterfaceAPI:showModal', error);-->
+<!--    }-->
+<!--  }-->
+
+<!--  async function showFreshchatDialog() {-->
+<!--    try {-->
+<!--      const data = await client.interface.trigger('showDialog', {-->
+<!--        title: 'Sample Dialog',-->
+<!--        template: './views/modal_freshchat.html'-->
+<!--      });-->
+<!--      console.log('Parent:InterfaceAPI:showDialog', data);-->
+<!--    } catch (error) {-->
+<!--      console.log('Parent:InterfaceAPI:showDialog', error);-->
+<!--    }-->
+<!--  }-->
+<!--</script>-->
+<div class="main">
+  <div id="sourcetextContainer">
+    <p id="sourcetext"></p>
+  </div>
+  <button id="getSuggestionButton" class="top-left">Get Suggestion</button>
+  <div id="apptextContainer">
+    <p id="apptext"></p>
+  </div>
+</div>
+</body>
+</html>

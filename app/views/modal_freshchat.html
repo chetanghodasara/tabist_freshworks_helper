@@ -1,0 +1,25 @@
+<html>
+<head>
+<!--    <script src="{{{appclient}}}"></script>-->
+<!--    <script async type="module"-->
+<!--            src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>-->
+<!--    <script async nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>-->
+    <script src={{{appclient}}}></script>
+    <script type="module"
+            src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/css/crayons-min.css"/>
+</head>
+<body>
+<div class="main">
+    <div id="sourcetextContainer">
+        <p id="sourcetext"></p>
+    </div>
+    <button id="getSuggestionButton" class="top-left">Get Suggestion</button>
+    <div id="apptextContainer">
+        <p id="apptext"></p>
+    </div>
+</div>
+<script src="../scripts/modal_freshchat.js"></script>
+</body>
+</html>

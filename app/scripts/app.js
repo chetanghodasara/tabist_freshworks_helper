@@ -1,18 +1,27 @@
-let client;
+window.frsh_init().then(function(client) {
+  window.client = client;
+});
 
-init();
-
-async function init() {
-  client = await app.initialized();
-  client.events.on('app.activated', renderText);
+async function showModal() {
+  try {
+    const data = await client.interface.trigger('showModal', {
+      title: 'Tabist Freshworks Helper',
+      template: './views/modal.html'
+    });
+    console.log('Parent:InterfaceAPI:showModal', data);
+  } catch (error) {
+    console.log('Parent:InterfaceAPI:showModal', error);
+  }
 }
 
-async function renderText() {
-  const textElement = document.getElementById('apptext');
-  const contactData = await client.data.get('contact');
-  const {
-    contact: { name }
-  } = contactData;
-
-  textElement.innerHTML = `Ticket is created by ${name}`;
+async function showDialog() {
+  try {
+    const data = await client.interface.trigger('showDialog', {
+      title: 'Sample Dialog',
+      template: './views/modal.html'
+    });
+    console.log('Parent:InterfaceAPI:showDialog', data);
+  } catch (error) {
+    console.log('Parent:InterfaceAPI:showDialog', error);
+  }
 }

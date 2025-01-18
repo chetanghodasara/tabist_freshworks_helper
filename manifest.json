@@ -1,16 +1,29 @@
 {
   "platform-version": "3.0",
   "modules": {
-    "common": {
+    "support_ticket": {
       "location": {
-        "full_page_app": {
+        "ticket_sidebar": {
           "url": "index.html",
-          "icon": "styles/images/icon.svg"
+          "icon": "styles/images/tabist_logo_c.svg"
+        },
+        "ticket_top_navigation": {
+          "url": "views/ticket_top_navigation.html",
+          "icon": "styles/images/tabist_logo_c.svg"
         }
-      },
-      "requests": {}
+      }
     },
-    "support_ticket": {}
+    "chat_conversation": {
+      "location": {
+        "conversation_user_info": {
+          "url": "index.html",
+          "icon": "styles/images/tabist_logo_c.svg"
+        }
+      }
+    },
+    "common": {
+      "requests": {}
+    }
   },
   "engines": {
     "node": "18.18.2",
